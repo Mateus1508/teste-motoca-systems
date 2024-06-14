@@ -1,0 +1,22 @@
+.status1 {
+  background: #354546;
+  color: #56ca00;
+}
+.status2 {
+  background: #544146;
+  color: #ffb400;
+}
+.status3 {
+  background: #55304c;
+  color: #ff4c51;
+}
+
+.status1,
+.status2,
+.status3 {
+  padding: 0 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+}
