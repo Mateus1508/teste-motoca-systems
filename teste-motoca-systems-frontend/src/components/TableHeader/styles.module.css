@@ -15,6 +15,23 @@
   gap: 15px;
 }
 
+.searchBox {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 10px;
+}
+
+.searchInput {
+  all: unset;
+  width: 300px;
+  font-size: 12px;
+}
+
 @media (max-width: 780px) {
   .container {
     flex-direction: column;
@@ -24,5 +41,14 @@
   .actions {
     flex-direction: column;
     width: 100%;
+  }
+
+  .searchBox {
+    width: 100%;
+  }
+
+  .searchInput {
+    width: 100%;
+    font-size: 16px;
   }
 }

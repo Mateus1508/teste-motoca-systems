@@ -1,0 +1,19 @@
+{
+  "motos": [
+    {
+      "id": "0002",
+      "modelo": "Yamaha Fazer 250 ABS",
+      "valor": 16000,
+      "cor": "Rosa",
+      "status": 2,
+      "undefined": 3
+    },
+    {
+      "id": "0003",
+      "modelo": "Suzuki Gixxer SF 250",
+      "valor": 18000,
+      "cor": "Azul",
+      "status": 1
+    }
+  ]
+}

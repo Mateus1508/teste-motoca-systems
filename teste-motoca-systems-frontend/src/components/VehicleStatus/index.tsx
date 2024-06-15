@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 interface Props {
-  status: 1 | 2 | 3;
+  status: number;
 }
 
 type DataType = {
