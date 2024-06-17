@@ -10,7 +10,7 @@ Para instalar as dependencias do projeto utilize o comando
 npm install
 ```
 
-Para iniciar os ambientes de frontend e backend em paralelo, utilize o comando:
+Para iniciar os ambientes de frontend e o json-server em paralelo, utilize o comando:
 
 ```bash
 npm run dev
