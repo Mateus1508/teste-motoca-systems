@@ -13,8 +13,8 @@ const SelectField = (props: Props) => {
       <InputLabel>{props.label}</InputLabel>
       <Select value={props.value} label={props.label} onChange={props.onChange} name={props.name}>
         <MenuItem value={1}>Em estoque</MenuItem>
-        <MenuItem value={2}>Sem estoque</MenuItem>
-        <MenuItem value={3}>Em trânsito</MenuItem>
+        <MenuItem value={2}>Em trânsito</MenuItem>
+        <MenuItem value={3}>Sem estoque</MenuItem>
       </Select>
     </FormControl>
   );
