@@ -17,3 +17,9 @@ button {
   all: unset;
   cursor: pointer;
 }
+
+hr {
+  border: 0px;
+
+  border-top: 1px solid rgba(202, 201, 205, 0.5);
+}

@@ -12,7 +12,7 @@ const TableHeader = ({ handleSearch }: Props) => {
   const navigate = useNavigate();
 
   function handleRedirectToAddMoto() {
-    navigate("/add-moto");
+    navigate("/add-or-edit");
   }
   return (
     <div className={styles.container}>

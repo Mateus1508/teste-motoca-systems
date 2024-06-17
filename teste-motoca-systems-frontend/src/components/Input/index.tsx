@@ -8,6 +8,7 @@ interface Props {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   label?: string;
   icon?: string | React.ReactNode;
+  required?: boolean;
 }
 
 const Input = (props: Props) => {
@@ -24,6 +25,7 @@ const Input = (props: Props) => {
         startAdornment: <InputAdornment position="start">{props.icon}</InputAdornment>,
       }}
       fullWidth
+      required={props.required}
     />
   );
 };

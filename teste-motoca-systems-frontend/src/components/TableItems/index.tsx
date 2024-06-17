@@ -2,48 +2,28 @@ import { BiTrashAlt } from "react-icons/bi";
 import { IoEyeOutline } from "react-icons/io5";
 import styles from "./styles.module.css";
 import VehicleStatus from "../VehicleStatus";
-import { QueryClient, useMutation, useQuery } from "@tanstack/react-query";
-import { MotoType } from "../../types/moto";
-import { MotoService } from "../../services/moto";
 import { CircularProgress } from "@mui/material";
 import { formatValueToCurrency } from "../../utils/formatToCurrency";
 import { useNavigate } from "react-router-dom";
 import React from "react";
+import useGetAll from "../../hooks/useGetAll";
+import useDelete from "../../hooks/useDelete";
 
 interface Props {
   search: string;
 }
 
 const TableItem = ({ search }: Props) => {
-  const queryClient = new QueryClient();
   const navigate = useNavigate();
   const [deleteInProgress, setDeleteInProgress] = React.useState<string | null>(null);
 
-  const {
-    data: motos,
-    isLoading,
-    isError,
-    refetch,
-  } = useQuery<MotoType[], Error>({
-    queryKey: ["motos"],
-    queryFn: () => MotoService.getAll(),
-  });
+  const { motos, isLoading, isError, refetch } = useGetAll();
 
-  const { mutate } = useMutation({
-    mutationFn: async (id: string) => {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      return MotoService.delete(id);
-    },
-    onSuccess: () => {
-      setDeleteInProgress(null);
-      queryClient.invalidateQueries({ queryKey: ["motos"] });
-      refetch();
-    },
-  });
+  const { mutate, isErrorDelete } = useDelete({ setDeleteInProgress, refetch });
 
   if (isLoading) {
     return (
-      <div className={styles.loadingTableItems}>
+      <div className={styles.loadingTableItems} data-testid="loading-spinner">
         <CircularProgress color="secondary" />
       </div>
     );
@@ -51,6 +31,10 @@ const TableItem = ({ search }: Props) => {
 
   if (isError) {
     return <div>Ocorreu um erro ao carregar as motos.</div>;
+  }
+
+  if (isErrorDelete) {
+    window.alert("Erro ao excluir moto!");
   }
 
   const filteredMotos = motos?.filter(
@@ -70,7 +54,7 @@ const TableItem = ({ search }: Props) => {
   };
 
   const handleEditMoto = (id: string) => {
-    navigate(`/add-moto/${id}`);
+    navigate(`/add-or-edit/${id}`);
   };
 
   return (
@@ -88,7 +72,11 @@ const TableItem = ({ search }: Props) => {
                 <p>Cor: {moto.cor}</p>
               </td>
               <td>
-                <button onClick={() => handleDelete(moto.id)} disabled={deleteInProgress === moto.id ?? true}>
+                <button
+                  onClick={() => handleDelete(moto.id)}
+                  disabled={deleteInProgress === moto.id ? true : false}
+                  data-testid={moto.id}
+                >
                   {deleteInProgress === moto.id ? (
                     <CircularProgress size={24} style={{ color: "red" }} />
                   ) : (

@@ -5,7 +5,7 @@ import { CircularProgress } from "@mui/material";
 import { MotoService } from "../../services/moto";
 import { useQuery } from "@tanstack/react-query";
 import { MotoType } from "../../types/moto";
-const AddMoto = () => {
+const AddOrEditMoto = () => {
   const { id } = useParams();
 
   const {
@@ -31,4 +31,4 @@ const AddMoto = () => {
   );
 };
 
-export default AddMoto;
+export default AddOrEditMoto;

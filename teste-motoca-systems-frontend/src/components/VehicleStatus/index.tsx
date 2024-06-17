@@ -21,10 +21,10 @@ const VehicleStatus = ({ status }: Props) => {
         setData({ text: "Em estoque", color: styles.status1 });
         break;
       case 2:
-        setData({ text: "Sem estoque", color: styles.status2 });
+        setData({ text: "Em trânsito", color: styles.status2 });
         break;
       case 3:
-        setData({ text: "Em trânsito", color: styles.status3 });
+        setData({ text: "Sem estoque", color: styles.status3 });
         break;
       default:
         setData({ text: "Em estoque", color: styles.status1 });

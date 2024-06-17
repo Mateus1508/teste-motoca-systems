@@ -1,6 +1,6 @@
 import React from "react";
 import TableHeader from "../../components/TableHeader";
-import TableItem from "../../components/TableItem";
+import TableItems from "../../components/TableItems";
 import styles from "./styles.module.css";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
     <div className={styles.container}>
       <TableHeader handleSearch={handleSearch} />
       <hr />
-      <TableItem search={search} />
+      <TableItems search={search} />
     </div>
   );
 };

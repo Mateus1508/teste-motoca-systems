@@ -1,18 +1,87 @@
 {
   "motos": [
     {
-      "id": "0002",
-      "modelo": "Yamaha Fazer 250 ABS",
-      "valor": 16000,
-      "cor": "Rosa",
-      "status": 2,
-      "undefined": 3
+      "id": "9",
+      "modelo": "Vespa Primavera 150",
+      "cor": "Amarelo",
+      "valor": 18000,
+      "status": 3
     },
     {
-      "id": "0003",
-      "modelo": "Suzuki Gixxer SF 250",
-      "valor": 18000,
-      "cor": "Azul",
+      "id": "10",
+      "modelo": "MT-03 ABS",
+      "cor": "Azul Metálico",
+      "valor": 21500,
+      "status": 2
+    },
+    {
+      "id": "11",
+      "modelo": "Crosser 150 Z",
+      "cor": "Preto e Laranja",
+      "valor": 14000,
+      "status": 1
+    },
+    {
+      "id": "12",
+      "modelo": "XTZ 150 Crosser",
+      "cor": "Verde",
+      "valor": 14500,
+      "status": 1
+    },
+    {
+      "id": "13",
+      "modelo": "Bros 160",
+      "cor": "Preto e Branco",
+      "valor": 13000,
+      "status": 1
+    },
+    {
+      "id": "14",
+      "modelo": "Pop 110i",
+      "cor": "Vermelho",
+      "valor": 9500,
+      "status": 1
+    },
+    {
+      "id": "15",
+      "modelo": "Shineray XY 50Q Phoenix",
+      "cor": "Rosa",
+      "valor": 5000,
+      "status": 1
+    },
+    {
+      "id": "16",
+      "modelo": "Harley-Davidson Iron 883",
+      "cor": "Preto Fosco",
+      "valor": 45000,
+      "status": 1
+    },
+    {
+      "id": "17",
+      "modelo": "BMW R 1250 GS Adventure",
+      "cor": "Cinza Metálico",
+      "valor": 95000,
+      "status": 1
+    },
+    {
+      "id": "18",
+      "modelo": "Ducati Monster 821",
+      "cor": "Vermelho",
+      "valor": 68000,
+      "status": 1
+    },
+    {
+      "id": "19",
+      "modelo": "Kawasaki Ninja ZX-10R",
+      "cor": "Verde Ninja",
+      "valor": 80000,
+      "status": 1
+    },
+    {
+      "id": "20",
+      "modelo": "Suzuki GSX-R1000R",
+      "cor": "Azul e Branco",
+      "valor": 75000,
       "status": 1
     }
   ]

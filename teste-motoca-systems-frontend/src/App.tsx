@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import AddMoto from "./pages/AddMoto";
+import AddOrEditMoto from "./pages/AddOrEditMoto";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -21,7 +21,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/add-moto/:id?" element={<AddMoto />} />
+            <Route path="/add-or-edit/:id?" element={<AddOrEditMoto />} />
           </Routes>
         </Router>
       </ThemeProvider>
